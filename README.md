@@ -1,4 +1,4 @@
-# Image to Text Cryptography
+# Text to Image Cryptography
 
 1. Provide a plain text
 2. The program translates each character to its ASCII decimal value
