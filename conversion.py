@@ -66,14 +66,21 @@ def decrypt():
 
 def main():
     print('===Image to Text Encryption===')
-    choice = int(input('(1) Encrypt\n(2) Decrypt\n> '))
-    match choice:
-        case 1:
-            pixels = textToPixels()
-            pixel_value = createPixelValue(pixels)
-            encrypt(pixel_value)
-        case 2:
-            decrypt()
+    isRunning = True
+    
+    while isRunning:
+        try:
+            choice = int(input('(1) Encrypt\n(2) Decrypt\n> '))
+
+            match choice:
+                case 1:
+                    pixels = textToPixels()
+                    pixel_value = createPixelValue(pixels)
+                    encrypt(pixel_value)
+                case 2:
+                    decrypt()
+        except ValueError:
+            print('Please enter a valid choice.')
 
 if __name__ == '__main__':
     main()
